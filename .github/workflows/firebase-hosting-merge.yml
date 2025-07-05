@@ -11,8 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci
-      - run: npx ng build
+
+      # {1}
+      - name: Setup Node.js $
+        uses: actions/setup-node@v4
+        with:
+          node-version: $
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      # {2}
+      - name: Install dependencies
+        run: npm ci
+
+      # {3}
+      - name: Build the project
+        run: npx ng build
+      
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
