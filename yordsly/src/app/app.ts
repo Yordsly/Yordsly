@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header.component';
-import { ThemeService } from './services/theme.service';
+import { ThemeService } from './services/themes/theme.service';
 
 @Component({
   selector: 'app-root',
