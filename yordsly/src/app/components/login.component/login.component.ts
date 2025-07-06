@@ -11,9 +11,9 @@ import { MatCardTitle } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { Authentication } from '../../services/authentication/authentication.service'; // Adjust the import path as necessary
+import { Authentication } from '../../services/authentication/authentication.service';
 import { Router } from '@angular/router';
-import { UserService } from '../../services/user/user.service'; // Assuming you have a UserService to manage user data
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-login.component',
@@ -25,7 +25,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   private authenticationService = inject(Authentication);
   private router = inject(Router);
-  private userService = inject(UserService); // Assuming you have a UserService to manage user
+  private userService = inject(UserService);
 
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
