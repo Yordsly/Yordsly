@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span> {{ title }} </span>
+  <span class="spacer"></span>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button matIconButton aria-label="Toggle theme button." (click)="themeService.toggleTheme()">
+    <mat-icon>{{ themeService.getCurrentTheme() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+</mat-toolbar>
