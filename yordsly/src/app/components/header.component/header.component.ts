@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
 import { Authentication } from '../../services/authentication/authentication.service';
 import { MatMenuModule } from '@angular/material/menu';
+import { SidenavService } from '../../services/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-header',
@@ -19,14 +20,19 @@ import { MatMenuModule } from '@angular/material/menu';
   standalone: true
 })
 export class Header {
-  title = 'Yordsly Designs';
+  title = 'Home of Yordsly';
   subtitle = 'A collection of designs by Yordsly';
 
   readonly themeService = inject(ThemeService);
   readonly userService = inject(UserService);
   readonly authenticationService = inject(Authentication);
+  private sidenavService = inject(SidenavService);
 
   constructor() {
     // Initialization logic can go here if needed
+  }
+
+  toggleSidenav(): void {
+    this.sidenavService.toggleSidenav();
   }
 }

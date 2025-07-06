@@ -3,6 +3,7 @@ import { LandingPageComponent } from './components/landing-page.component/landin
 import { SignUpComponent } from './components/sign-up.component/sign-up.component';
 import { LoginComponent } from './components/login.component/login.component';
 import { UserProfileComponent } from './components/user-profile.component/user-profile.component';
+import { YordicoinGamesComponent } from './components/yordicoin-games.component/yordicoin-games.component';
 
 export const routes: Routes = [
     {
@@ -19,5 +20,8 @@ export const routes: Routes = [
     },
     {
         path: 'userProfile', component: UserProfileComponent
+    },
+    {
+        path: 'yordicoinGames', component: YordicoinGamesComponent
     }
 ];

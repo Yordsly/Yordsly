@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
 
 @Component({
-  selector: 'app-login.component',
+  selector: 'app-login',
   imports: [MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatError, MatCardHeader, MatCardTitle, ReactiveFormsModule, CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.sass'

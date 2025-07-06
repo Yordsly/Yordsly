@@ -1,0 +1,35 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" [opened]="false">
+    <nav class="mat-nav-list">
+      <mat-list>
+        <mat-list-item>
+          <a matLine routerLink="/landing" (click)="sidenav.close()">
+            <mat-icon matListItemIcon>home</mat-icon>
+            Home
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a matLine routerLink="/yordicoinGames" (click)="sidenav.close()">
+            <mat-icon matListItemIcon>casino</mat-icon>
+            Yordicoin Games
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a matLine routerLink="/userProfile" (click)="sidenav.close()">
+            <mat-icon matListItemIcon>person</mat-icon>
+            Profile
+          </a>
+        </mat-list-item>
+        <mat-list-item>
+          <a matLine routerLink="/settings" (click)="sidenav.close()">
+            <mat-icon matListItemIcon>settings</mat-icon>
+            Settings
+          </a>
+        </mat-list-item>
+      </mat-list>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

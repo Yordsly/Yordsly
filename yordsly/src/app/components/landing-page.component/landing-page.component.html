@@ -1,1 +1,36 @@
-<p>landing-page.component works!</p>
+<div class="card-container">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Welcome to Yordsly.com!</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+            <p>
+            Yordsly.com is your go-to place for all things Yordsly! Whether you're looking to play our games, connect with the Yordsly community, or see your Yordicoin balance, we've got you covered.
+            </p>
+            <p>
+            Explore our features, connect with your community, and make the most out of your Discord server!
+            </p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/signup">Get Started</button>
+            <button mat-raised-button color="accent" routerLink="/login">Login</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="card">
+        <mat-card-header style="margin-bottom: 10px;">
+            <mat-card-title>Yordicoin, where discord and coin based fun meet!</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/coins_at_slot_machine.jpg" alt="Photo of a Yordicoin">
+        <mat-card-content>
+            <p>
+                Yordicoin is our exclusive currency for playing slot and poker-style games on the website. Enjoy exciting Discord and web-based games, and use Yordicoin to join the fun!
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/yordicoinGames">Play!</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

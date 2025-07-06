@@ -14,7 +14,7 @@ import { Router, RouterLink } from '@angular/router';
 import { Authentication } from '../../services/authentication/authentication.service'; // Adjust the import path as necessary
 
 @Component({
-  selector: 'app-sign-up.component',
+  selector: 'app-sign-up',
   imports: [MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatError, MatCardHeader, MatCardTitle, ReactiveFormsModule, CommonModule, RouterLink],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.sass',
