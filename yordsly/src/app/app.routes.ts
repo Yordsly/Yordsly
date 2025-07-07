@@ -4,6 +4,7 @@ import { SignUpComponent } from './components/sign-up.component/sign-up.componen
 import { LoginComponent } from './components/login.component/login.component';
 import { UserProfileComponent } from './components/user-profile.component/user-profile.component';
 import { YordicoinGamesComponent } from './components/yordicoin-games.component/yordicoin-games.component';
+import { YordiSlotsComponent } from './components/game_components/yordi-slots.component/yordi-slots.component';
 
 export const routes: Routes = [
     {
@@ -23,5 +24,8 @@ export const routes: Routes = [
     },
     {
         path: 'yordicoinGames', component: YordicoinGamesComponent
+    },
+    {
+        path: 'yordicoinSlots', component: YordiSlotsComponent
     }
 ];
