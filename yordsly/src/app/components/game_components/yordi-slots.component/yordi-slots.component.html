@@ -1,1 +1,33 @@
-<p>yordi-slots.component works!</p>
+<mat-card class="slot-machine">
+  <mat-card-header>
+    🎰 Yordi Slots!
+  </mat-card-header>
+  
+  <mat-card-content>
+    <div class="reels-container">
+      <div class="reel" *ngFor="let reel of reels; let i = index">
+        <div class="reel-strip" [class.spinning]="isSpinning" 
+             [style.transform]="'translateY(' + reel.position + 'px)'">
+          <div class="symbol" *ngFor="let symbol of reel.symbols">
+            {{ symbol }}
+          </div>
+        </div>
+        <div class="reel-window"></div>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <button mat-raised-button color="primary" 
+              (click)="spin()" 
+              [disabled]="isSpinning">
+        {{ isSpinning ? 'SPINNING...' : 'SPIN!' }}
+      </button>
+    </div>
+    
+    <div class="result" *ngIf="lastResult">
+      <h3 [class.winner]="lastResult.isWin">
+        {{ lastResult.message }}
+      </h3>
+    </div>
+  </mat-card-content>
+</mat-card>
