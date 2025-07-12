@@ -15,7 +15,7 @@
         
         <mat-card-actions>
             <button mat-raised-button color="primary" routerLink="/signup">Get Started</button>
-            <button mat-raised-button color="accent" routerLink="/login">Login</button>
+            <button *ngIf="!isLoggedIn" mat-raised-button color="accent" routerLink="/login">Login</button>
         </mat-card-actions>
     </mat-card>
 
