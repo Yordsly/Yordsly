@@ -18,7 +18,11 @@
         <mat-error *ngIf="password?.hasError('required')">
           Password is required
         </mat-error>
+
       </mat-form-field>
+      <mat-error *ngIf="loginForm.hasError('failedLogin')" style="margin-top: 10px; display: flex; justify-content: flex-end;">
+        Email or password is incorrect
+      </mat-error>
 
       <div class="form-actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">
@@ -28,6 +32,7 @@
           Cancel
         </button>
       </div>
+
     </form>
   </mat-card-content>
 </mat-card>

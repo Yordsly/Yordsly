@@ -41,9 +41,12 @@ export class LoginComponent {
           this.loginForm.value.email, 
           this.loginForm.value.password
         );
+
+        console.log('User:', user);
         
         if (user) {
           console.log('Login successful:', user);
+          
           // Save User Data (if needed)
           this.userService.setCurrentUser(user);
           // Redirect to dashboard
@@ -51,6 +54,8 @@ export class LoginComponent {
 
         } else {
           console.error('Login failed');
+          this.loginForm.setErrors({ failedLogin: true });
+          // this.loginForm.setErrors({ passwordMismatch: true });
           // Handle sign-up failure (e.g., show an error message)
         }
       } catch (error) {
